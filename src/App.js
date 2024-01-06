@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NavigatePhotos from './NavigatePhotos';
+import PhotoDetailsWrapper from './PhotoDetailsWrapper';
+import jsonData from './photos.json';
 
 function App() {
+  const [photos, setPhotos] = useState([]);
+
+  useEffect(() => {
+    setPhotos(jsonData.photos);
+  }, []);
+
+  const handleRating = (newRating, photoId) => {
+    const updatedPhotos = photos.map(photo =>
+        photo.id === photoId ? { ...photo, rating: newRating } : photo
+    );
+    setPhotos(updatedPhotos);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<NavigatePhotos photos={photos} onRate={handleRating} />} />
+          <Route path="/photo/:id" element={<PhotoDetailsWrapper photos={photos} onRate={handleRating} />} />
+        </Routes>
+      </Router>
   );
 }
 

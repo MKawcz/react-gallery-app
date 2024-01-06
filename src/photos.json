@@ -1,0 +1,44 @@
+{
+  "photos" : [
+    {
+      "id": 1,
+      "link": "/photos/url_do_zdjecia_1.jpg",
+      "rating": 4.0,
+      "authorDetails": "Jan Kowalski",
+      "dateAdded": "2022-01-01",
+      "otherDetails": "Zdjęcie z wakacji"
+    },
+    {
+      "id": 2,
+      "link": "/photos/url_do_zdjecia_2.jpg",
+      "rating": 3.7,
+      "authorDetails": "Anna Nowak",
+      "dateAdded": "2022-02-15",
+      "otherDetails": "Krajobraz górski"
+    },
+    {
+      "id": 3,
+      "link": "/photos/url_do_zdjecia_3.jpg",
+      "rating": 4.5,
+      "authorDetails": "Paweł Kowalczyk",
+      "dateAdded": "2022-03-22",
+      "otherDetails": "Portret w czerni i bieli"
+    },
+    {
+      "id": 4,
+      "link": "/photos/url_do_zdjecia_4.jpg",
+      "rating": 2.8,
+      "authorDetails": "Ewa Mazur",
+      "dateAdded": "2022-04-10",
+      "otherDetails": "Miasto nocą"
+    },
+    {
+      "id": 5,
+      "link": "/photos/url_do_zdjecia_5.jpg",
+      "rating": 3.9,
+      "authorDetails": "Michał Wiśniewski",
+      "dateAdded": "2022-05-05",
+      "otherDetails": "Zachód słońca nad morzem"
+    }
+  ]
+}

@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.on .star {
+  color: gold;
+}
+
+.off .star {
+  color: grey;
+}
